@@ -1,7 +1,7 @@
 function SingIn() {
 
     return (
-      <div className='bg-red-100'>
+      <div>
         SingIn
       </div>
     )

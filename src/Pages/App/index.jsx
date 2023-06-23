@@ -7,6 +7,7 @@ import NotFound from "../NotFound";
 import SingIn from "../SignIn";
 import Navbar from "../../Components/Navbar";
 import "./App.css";
+import Layout from "../../Components/Layout";
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -24,8 +25,10 @@ const AppRoutes = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <AppRoutes />
       <Navbar />
+      <Layout>
+        <AppRoutes />
+      </Layout>
     </BrowserRouter>
   );
 };
