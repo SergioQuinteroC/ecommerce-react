@@ -19,6 +19,14 @@ export const ShoppingCartProvider = ({ children }) => {
     images: [],
   });
 
+  // Checkout Side Menu - Open/Close
+  const [isCheckoutSideMenuOpen, setIsCheckoutSideMenuOpen] = useState(false);
+  const openCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(true);
+  const closeCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(false);
+
+  // Shopping Cart - Add products to cart
+  const [cartProducts, setCartProducts] = useState([]);
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -29,6 +37,11 @@ export const ShoppingCartProvider = ({ children }) => {
         closeProductDetail,
         productToShow,
         setProductToShow,
+        cartProducts,
+        setCartProducts,
+        isCheckoutSideMenuOpen,
+        openCheckoutSideMenu,
+        closeCheckoutSideMenu,
       }}
     >
       {children}
