@@ -77,7 +77,7 @@ const Navbar = () => {
             to="/my-account"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            My-account
+            My account
           </NavLink>
         </li>
         <li>
@@ -85,7 +85,7 @@ const Navbar = () => {
             to="/sign-in"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            Sign-in
+            Sign in
           </NavLink>
         </li>
         <li className="flex items-center">
