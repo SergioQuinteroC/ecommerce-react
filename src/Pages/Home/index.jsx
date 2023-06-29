@@ -1,10 +1,14 @@
 import { useContext } from "react";
+import { useParams } from "react-router-dom";
 import Card from "../../Components/Card";
 import ProductDetail from "../../Components/ProductDetail";
 import { ShoppingCartContext } from "../../Context";
 
 function Home() {
-  const { items, searchByTitle, setSearchByTitle, filteredItems } = useContext(ShoppingCartContext);
+  const { searchByTitle, setSearchByTitle, filteredItems } =
+    useContext(ShoppingCartContext);
+
+  const { category } = useParams();
 
   return (
     <>
