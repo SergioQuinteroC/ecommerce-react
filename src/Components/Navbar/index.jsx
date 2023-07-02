@@ -37,7 +37,7 @@ const Navbar = () => {
     if (hasUserAnAccount && !isUserSignOut) {
       return (
         <>
-          <li className="text-black/60">example@mail.com</li>
+          <li className="text-black/60">{parsedAccount?.email}</li>
           <li>
             <NavLink
               to="/my-orders"
@@ -85,7 +85,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center fixed top-0 w-full py-5 px-8 text-md font-light z-10">
+    <nav className="flex justify-between items-center fixed top-0 w-full py-5 px-8 text-md font-light z-10 bg-white">
       <ul className="flex items-center gap-3 ">
         <li className="font-semibold text-lg">
           <NavLink to={`${isUserSignOut ? "/sign-in" : "/"}`}>Shopi</NavLink>
